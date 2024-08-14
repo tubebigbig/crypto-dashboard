@@ -2,6 +2,10 @@
 
 This project is a crypto dashboard that allows to view and manage crypto assets. Track the prices of crypto asset, view distribution, and execute real transfer. support multiple crypto.
 
+# Demo
+
+https://crypto-dashboard-nu-ten.vercel.app/
+
 # File structure
 
 ```
