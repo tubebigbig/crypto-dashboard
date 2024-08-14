@@ -49,3 +49,12 @@ npm run dev
 ```
 
 default server base on `http://localhost:5173`
+
+# TODO
+
+- [ ] switch Table to DataGrid
+- [ ] implement asset table loading, sort, search
+- [ ] mainnet contract issue
+- [ ] detect asset change and tracking status
+- [ ] live crypto market table
+- [ ] live crypto market candlestick chart
