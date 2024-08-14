@@ -14,7 +14,7 @@ import ThemeToggle from "@components/ThemeToggle";
 
 export const Header = () => {
   const theme = useTheme();
-  const { account } = useWalletStore();
+  const account = useWalletStore((state) => state.account);
   const themeContext = useContext(ThemeContext);
   const { open: openWeb3Modal, close: closeWeb3Modal } = useWeb3Modal();
   const { open: isWev3MOdalOpen } = useWeb3ModalState();

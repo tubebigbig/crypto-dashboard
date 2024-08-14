@@ -22,7 +22,10 @@ import TransferDialog from "./TransferDialog";
 const CURRENCY_UNIT: string = "usd";
 
 const Dashboard = () => {
-  const { account, assets, cryptoPrices, tokenList } = useWalletStore();
+  const account = useWalletStore((state) => state.account);
+  const assets = useWalletStore((state) => state.assets);
+  const cryptoPrices = useWalletStore((state) => state.cryptoPrices);
+  const tokenList = useWalletStore((state) => state.tokenList);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [transferData, setTransferData] = useState<{
     token: `0x${string}`;

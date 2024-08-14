@@ -13,8 +13,10 @@ const useWallet = () => {
   const { data: balance, refetch } = useBalance({
     address: account.address,
   });
-  const { setAcount, setAssets, setCryptoPrices, setTokenList } =
-    useWalletStore();
+  const setAcount = useWalletStore((state) => state.setAcount);
+  const setAssets = useWalletStore((state) => state.setAssets);
+  const setCryptoPrices = useWalletStore((state) => state.setCryptoPrices);
+  const setTokenList = useWalletStore((state) => state.setTokenList);
   const currentTokenList = useMemo(
     () =>
       [ethTokenList, sepoliaTokenList].find(
@@ -44,7 +46,6 @@ const useWallet = () => {
     // return () => unwatchList.forEach((unwatch) => unwatch?.());
   }, [currentTokenList]);
 
-  if (!currentTokenList) return;
   const { data: assetBalances = [], refetch: refetchAssets } = useReadContracts(
     {
       allowFailure: false,
@@ -102,6 +103,7 @@ const useWallet = () => {
   }, [account.chainId]);
 
   useEffect(() => {
+    if (!currentTokenList) return;
     setTokenList(currentTokenList.tokens);
   }, [currentTokenList]);
 

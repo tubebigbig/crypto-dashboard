@@ -35,7 +35,7 @@ const TransferDialog = ({
   open,
   onClose,
 }: TransferDialogProps) => {
-  const { account } = useWalletStore();
+  const account = useWalletStore((state) => state.account);
   const toastId = useRef<ToastId>("");
   const { updateAllBalance } = useContext(WalletConext);
   const { data: gasPrice } = useGasPrice({
