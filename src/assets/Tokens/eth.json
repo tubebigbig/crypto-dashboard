@@ -1,0 +1,37 @@
+{
+  "chainId": 1,
+  "name": "Ethereum Token List",
+  "version": "0.1.0",
+  "tokens": [
+    {
+      "coinId": "ethereum",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "type": "ERC20",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "chainId": 1,
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/2518/large/weth.png?1607050326"
+    },
+    {
+      "coinId": "usd-coin",
+      "name": "USDC",
+      "symbol": "USDC",
+      "type": "ERC20",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "chainId": 1,
+      "decimals": 6,
+      "logoURI": "https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389"
+    },
+    {
+      "coinId": "bitcoin",
+      "name": "bitcoin",
+      "symbol": "BTC",
+      "type": "ERC20",
+      "address": "0xC0BC84e95864BdfDCd1CCFB8A3AA522E79Ca1410",
+      "chainId": 1,
+      "decimals": 8,
+      "logoURI": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+    }
+  ]
+}
