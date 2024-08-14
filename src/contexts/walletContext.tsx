@@ -6,7 +6,7 @@ const WalletConext = createContext({
 });
 
 export const WalletStoreProvider = ({ children }: PropsWithChildren) => {
-  const updateAllBalance = useWallet() || (() => {});
+  const updateAllBalance = useWallet();
   return (
     <WalletConext.Provider value={{ updateAllBalance }}>
       {children}
